@@ -5,8 +5,8 @@ const inputText = document.getElementById('add-text');
 
 const btnInsert = () => {
   add(inputText.value);
-  inputText.value = '';
   dom.creatElements(inputText.value, getLen());
+  inputText.value = '';
 };
 
 const btnDelete = () => {

@@ -9,8 +9,8 @@ const creatElements = (desc, index) => {
   elCheckBox.setAttribute('type', 'checkbox');
   elCheckBox.setAttribute('id', index);
   elCheckBox.className = 'checkbox';
-  elText.textContent = desc;
   elCheckBox.className = 'checkbox';
+  elText.innerText = desc;
 
   elLi.appendChild(elCheckBox);
   elLi.appendChild(elText);
