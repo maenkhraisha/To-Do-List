@@ -47,9 +47,16 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
-.header >p {
+
+ul > li > p,
+input[type='checkbox'] {
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+.header > p {
   width: 90%;
-} 
+}
 
 /* add row */
 .add-meme {
@@ -71,12 +78,6 @@ ul {
 /* end add row */
 .checkbox {
   margin: 0.5rem;
-}
-
-ul > li > p,
-input[type='checkbox'] {
-  display: inline-block;
-  padding: 0.5rem;
 }
 
 .btn-clear {
