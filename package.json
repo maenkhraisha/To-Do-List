@@ -37,6 +37,7 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "boxicons": "^2.1.2",
     "lodash": "^4.17.21"
   }
 }

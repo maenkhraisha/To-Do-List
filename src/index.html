@@ -4,13 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>To Do List</title>
 </head>
 
 <body>
     <div class="container">
-        <h1>To Do List</h1>
-        <ul class="list"></ul>
+        <div class="header">
+            <p>To Do List</p>
+            <a href="">
+                <box-icon name='refresh'></box-icon>
+            </a>
+        </div>
+
+        <hr class="hirozntal-line">
+        <div class="add-meme">
+            <input type="text" id="add-text" name="name" placeholder="add to your list">
+            <box-icon name='subdirectory-left'></box-icon>
+        </div>
+        <hr class="hirozntal-line">
+        <ul class="list">
+
+        </ul>
+        <div class="btn-clear"><a href="#">Clear all completed</a></div>
     </div>
 
 </body>
