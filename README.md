@@ -24,7 +24,8 @@ Go to live demo : available soon
 ```
 $ git clone git@github.com:maen1980/To-Do-list.git
 ```
-
+use npm install
+use npm start
 
 
 ### Prerequisites
