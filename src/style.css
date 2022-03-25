@@ -1,0 +1,80 @@
+:root {
+  --primary-color: #3b3b3b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+}
+
+body {
+  background-color: #e5e5f7;
+  opacity: 1;
+  background-size: 20px 20px;
+  background-image: repeating-linear-gradient(0deg, #444cf7, #444cf7 1px, #e5e5f7 1px, #e5e5f7);
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50vw;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  box-shadow: 5px 10px 18px #888;
+  background: white;
+  color: rgb(97, 96, 96);
+}
+
+.header {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* add row */
+.add-meme {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#add-text {
+  border: none;
+  padding: 0.5rem;
+}
+
+.hirozntal-line {
+  color: rgb(238, 238, 238);
+}
+
+/* end add row */
+.checkbox {
+  margin: 0.5rem;
+}
+
+ul > li > p,
+input[type='checkbox'] {
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+.btn-clear {
+  text-align: center;
+  background-color: rgb(238, 238, 238);
+  padding: 1rem;
+}
