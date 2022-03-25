@@ -32,11 +32,13 @@ ul {
   top: 50%;
   left: 50%;
   width: 50vw;
+  max-height: 90vh;
   transform: translate(-50%, -50%);
   flex-direction: column;
   box-shadow: 5px 10px 18px #888;
   background: white;
   color: rgb(97, 96, 96);
+  overflow: scroll;
 }
 
 .header {
@@ -45,6 +47,9 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
+.header >p {
+  width: 90%;
+} 
 
 /* add row */
 .add-meme {
@@ -56,6 +61,7 @@ ul {
 #add-text {
   border: none;
   padding: 0.5rem;
+  width: 90%;
 }
 
 .hirozntal-line {

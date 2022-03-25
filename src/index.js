@@ -1,8 +1,9 @@
 import './style.css';
 import 'boxicons';
-import list from './module/do-object.js';
-import Dom from './module/Dom-Func.js';
+import { getList } from './module/meme-object.js';
+import dom from './module/add-Dom-elem.js';
+import _ from './module/crud.js';
 
-list.getList().forEach((element) => {
-  Dom.creatElements(element.description);
+getList().forEach((element) => {
+  dom.creatElements(element.description, element.index);
 });
