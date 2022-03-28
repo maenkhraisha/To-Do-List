@@ -1,4 +1,6 @@
-import { add, del, getLen, updateindex } from './meme-object.js';
+import {
+  add, del, getLen, updateindex,
+} from './meme-object.js';
 import dom from './add-Dom-elem.js';
 
 const inputText = document.getElementById('add-text');
