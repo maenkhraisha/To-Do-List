@@ -1,14 +1,15 @@
 import './style.css';
 import 'boxicons';
-import { getList } from './module/meme-object.js';
+import { getLocal } from './module/meme-object.js';
 import dom from './module/add-Dom-elem.js';
 import d from './module/crud.js';
 
 const domBtnInsert = document.getElementById('insert');
 const domBtnDelete = document.getElementById('btn-clear');
+const inputText = document.getElementById('add-text');
 
 // === display the list === //
-getList().forEach((element) => {
+getLocal().forEach((element) => {
   dom.creatElements(element.description, element.index);
 });
 // ======================== //
@@ -30,4 +31,10 @@ cbList.forEach.call(cbList, (cb) => {
     else this.nextElementSibling.style.textDecoration = 'none';
   });
 });
-// ================================ //
+// ==== add new meme when press enter === //
+inputText.addEventListener('keyup', (event) => {
+  if (event.key === 'Enter') {
+    domBtnInsert.click();
+  }
+});
+// ====================================== //

@@ -5,7 +5,13 @@ const setLocal = () => localStorage.setItem('memelist', JSON.stringify(memeList)
 // === get local storage === //
 const getLocal = () => JSON.parse(localStorage.getItem('memelist'));
 // ==================== //
-
+// === update the index values when delete an item === //
+const updateindex = () => {
+  memeList.forEach((element, index) => {
+    element.index = index + 1;
+  });
+};
+// ============================= //
 // === delete item from meme === //
 const del = (index) => {
   index = Number(index);
@@ -24,11 +30,9 @@ const add = (item) => {
 };
 // ==================== //
 // === get meme list === //
-const getList = () => getLocal();
-// ==================== //
-// === get meme list === //
 const getLen = () => getLocal().length;
 // ==================== //
+
 export {
-  add, getList, del, getLocal, getLen,
+  add, del, getLocal, getLen, updateindex,
 };

@@ -1,4 +1,4 @@
-import { add, del, getLen } from './meme-object.js';
+import { add, del, getLen, updateindex } from './meme-object.js';
 import dom from './add-Dom-elem.js';
 
 const inputText = document.getElementById('add-text');
@@ -14,6 +14,7 @@ const btnDelete = () => {
   checkboxlist.forEach((element) => {
     if (element.checked === true) del(element.getAttribute('id'));
   });
+  updateindex();
 };
 
 export default { btnInsert, btnDelete };
