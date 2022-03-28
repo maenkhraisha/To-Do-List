@@ -74,6 +74,10 @@ input[type='checkbox'] {
   color: rgb(238, 238, 238);
 }
 
+.li-edit-icon{
+  padding-top: 0.25rem;
+  float: right; 
+}
 /* end add row */
 .checkbox {
   margin: 0.5rem;
