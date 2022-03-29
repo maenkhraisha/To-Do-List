@@ -53,9 +53,11 @@ input[type='checkbox'] {
   padding: 0.5rem;
   border: none;
 }
+
 [contenteditable] {
-  outline: 0px solid transparent;
+  outline: 0 solid transparent;
 }
+
 .header > p {
   width: 90%;
 }
