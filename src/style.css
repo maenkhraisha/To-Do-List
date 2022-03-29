@@ -51,8 +51,11 @@ ul > li > p,
 input[type='checkbox'] {
   display: inline-block;
   padding: 0.5rem;
+  border: none;
 }
-
+[contenteditable] {
+  outline: 0px solid transparent;
+}
 .header > p {
   width: 90%;
 }
@@ -68,6 +71,7 @@ input[type='checkbox'] {
   border: none;
   padding: 0.5rem;
   width: 90%;
+  font-style: italic;
 }
 
 .hirozntal-line {
@@ -77,6 +81,7 @@ input[type='checkbox'] {
 .li-edit-icon {
   padding-top: 0.25rem;
   float: right;
+  cursor: move;
 }
 
 /* end add row */

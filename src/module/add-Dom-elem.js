@@ -14,14 +14,12 @@ const creatElements = (desc, index) => {
   elText.innerText = desc;
   elIcon.setAttribute('name', 'dots-vertical-rounded');
   elIcon.className = 'li-edit-icon';
-  elText.setAttribute('contenteditable', 'true');
+  elIcon.setAttribute('id', index);
 
   elLi.appendChild(elCheckBox);
   elLi.appendChild(elText);
   elLi.appendChild(elIcon);
   elLi.appendChild(hLine);
-
-  // elLi.appendChild('<box-icon name=\'dots-vertical-rounded\'></box-icon>');
   parentUL.appendChild(elLi);
 };
 
