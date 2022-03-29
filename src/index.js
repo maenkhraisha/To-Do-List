@@ -19,7 +19,6 @@ getLocal().forEach((element) => {
 // === add new item === //
 domBtnInsert.addEventListener('click', () => {
   d.btnInsert();
-  window.location.reload();
 });
 // ==================== //
 // === delete item or multiple items === //

@@ -1,15 +1,15 @@
 let memeList = [];
 // === set local storage === //
-const setLocal = () => {
-  const data = localStorage.setItem('memelist', JSON.stringify(memeList));
+const setLocal = () => localStorage.setItem('memelist', JSON.stringify(memeList));
+// ==================== //
+// === get local storage === //
+const getLocal = () => {
+  const data = JSON.parse(localStorage.getItem('memelist'));
   if (data !== null) {
     return data;
   }
   return [];
 };
-// ==================== //
-// === get local storage === //
-const getLocal = () => JSON.parse(localStorage.getItem('memelist'));
 // ==================== //
 // === update the index values when delete an item === //
 const updateindex = () => {
