@@ -38,7 +38,6 @@ ul {
   box-shadow: 5px 10px 18px #888;
   background: white;
   color: rgb(97, 96, 96);
-  overflow: scroll;
 }
 
 .header {
@@ -52,6 +51,11 @@ ul > li > p,
 input[type='checkbox'] {
   display: inline-block;
   padding: 0.5rem;
+  border: none;
+}
+
+[contenteditable] {
+  outline: 0 solid transparent;
 }
 
 .header > p {
@@ -69,10 +73,17 @@ input[type='checkbox'] {
   border: none;
   padding: 0.5rem;
   width: 90%;
+  font-style: italic;
 }
 
 .hirozntal-line {
   color: rgb(238, 238, 238);
+}
+
+.li-edit-icon {
+  padding-top: 0.25rem;
+  float: right;
+  cursor: move;
 }
 
 /* end add row */
