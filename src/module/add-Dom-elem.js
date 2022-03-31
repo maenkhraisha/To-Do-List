@@ -1,3 +1,5 @@
+import { getStatus } from './meme-object.js';
+
 const parentUL = document.querySelector('.list');
 
 const creatElements = (desc, index) => {
@@ -10,8 +12,11 @@ const creatElements = (desc, index) => {
   elCheckBox.setAttribute('type', 'checkbox');
   elCheckBox.setAttribute('id', index);
   elCheckBox.className = 'checkbox';
-  elCheckBox.className = 'checkbox';
   elText.innerText = desc;
+  if (getStatus(index - 1)) {
+    elText.style.textDecoration = 'line-through';
+    elCheckBox.checked = true;
+  }
   elIcon.setAttribute('name', 'dots-vertical-rounded');
   elIcon.className = 'li-edit-icon';
   elIcon.setAttribute('id', index);
