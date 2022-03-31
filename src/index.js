@@ -1,11 +1,11 @@
 import './style.css';
 import 'boxicons';
 import {
+  completedStatus,
   del, getLocal, updateindex, updateText,
 } from './module/meme-object.js';
 import dom from './module/add-Dom-elem.js';
 import d from './module/crud.js';
-// import { update } from 'lodash';
 
 const domBtnInsert = document.getElementById('insert');
 const domBtnDelete = document.getElementById('btn-clear');
@@ -19,6 +19,7 @@ getLocal().forEach((element) => {
 // === add new item === //
 domBtnInsert.addEventListener('click', () => {
   d.btnInsert();
+  window.location.reload();
 });
 // ==================== //
 // === delete item or multiple items === //
@@ -32,8 +33,13 @@ domBtnDelete.addEventListener('click', () => {
 const cbList = document.querySelectorAll('[type="checkbox"]');
 cbList.forEach.call(cbList, (cb) => {
   cb.addEventListener('click', function () {
-    if (cb.checked) this.nextElementSibling.style.textDecoration = 'line-through';
-    else this.nextElementSibling.style.textDecoration = 'none';
+    if (cb.checked) {
+      this.nextElementSibling.style.textDecoration = 'line-through';
+      completedStatus(cb.id);
+    } else {
+      this.nextElementSibling.style.textDecoration = 'none';
+      completedStatus(cb.id);
+    }
   });
 });
 // === action when click option icon === //
@@ -59,9 +65,6 @@ icList.forEach.call(icList, (ic) => {
         ic.parentElement.childNodes[1].setAttribute('contenteditable', 'false');
         ic.parentElement.style.backgroundColor = '#fff';
       }
-    });
-    ic.parentElement.childNodes[1].addEventListener('onblur', (event) => {
-      console.log(event);
     });
   });
 });
