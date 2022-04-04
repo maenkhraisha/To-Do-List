@@ -19,16 +19,13 @@ getLocal().forEach((element) => {
 // === add new item === //
 domBtnInsert.addEventListener('click', () => {
   d.btnInsert();
-  window.location.reload();
 });
-// ==================== //
 // === delete item or multiple items === //
 domBtnDelete.addEventListener('click', () => {
   d.btnDelete();
   updateindex();
   window.location.reload();
 });
-// ===================================== //
 // === event when check the box === //
 const cbList = document.querySelectorAll('[type="checkbox"]');
 cbList.forEach.call(cbList, (cb) => {
@@ -50,12 +47,12 @@ icList.forEach.call(icList, (ic) => {
       del(ic.id);
       updateindex();
       window.location.reload();
+    } else {
+      ic.setAttribute('name', 'trash');
+      ic.parentElement.childNodes[1].setAttribute('contenteditable', 'true');
+      ic.parentElement.childNodes[1].focus();
+      ic.parentElement.style.backgroundColor = '#f0c5e1';
     }
-    ic.setAttribute('name', 'trash');
-    ic.parentElement.childNodes[1].setAttribute('contenteditable', 'true');
-    ic.parentElement.childNodes[1].focus();
-    ic.parentElement.style.backgroundColor = '#f0c5e1';
-
     ic.parentElement.childNodes[1].addEventListener('keydown', (event) => {
       if (event.key === 'Enter' && !event.shiftKey) {
         event.preventDefault();
@@ -68,12 +65,15 @@ icList.forEach.call(icList, (ic) => {
     });
   });
 });
-
-// ===================================== //
 // ==== add new meme when press enter === //
 inputText.addEventListener('keyup', (event) => {
   if (event.key === 'Enter') {
     domBtnInsert.click();
   }
 });
-// ====================================== //
+// ==== add new meme when press enter === //
+document.addEventListener('keyup', (event) => {
+  if (event.key === 'Escape') {
+    window.location.reload();
+  }
+});
