@@ -13,9 +13,10 @@
 
 ## Live Demo 
 
-Go to live demo : available soon
+Go to live demo : 
+https://maenkhraisha.github.io/To-Do-list/
 
-![portfolio]()
+![portfolio](./src/img/Capture2.PNG)
 
 ## Getting Started
 
