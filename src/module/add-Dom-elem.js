@@ -20,6 +20,8 @@ const creatElements = (desc, index) => {
   elIcon.setAttribute('name', 'dots-vertical-rounded');
   elIcon.className = 'li-edit-icon';
   elIcon.setAttribute('id', index);
+  elLi.setAttribute('draggable', 'true');
+  elLi.className = 'drag-item';
 
   elLi.appendChild(elCheckBox);
   elLi.appendChild(elText);
