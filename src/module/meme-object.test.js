@@ -86,11 +86,3 @@ describe('test delete', () => {
     func.flushStorage([]);
   });
 });
-// // === get meme list === //
-// const getLen = () => getLocal().length;
-
-// // === get the status === //
-// const getStatus = (id) => {
-//   memeList = getLocal();
-//   return memeList[id].completed;
-// };
