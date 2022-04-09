@@ -1,21 +1,13 @@
-let memeList = [];
-// === set local storage === //
-const setLocal = () => localStorage.setItem('memelist', JSON.stringify(memeList));
+import { getLocal, setLocal } from './storage.js';
 
-// === get local storage === //
-const getLocal = () => {
-  const data = JSON.parse(localStorage.getItem('memelist'));
-  if (data !== null) {
-    return data;
-  }
-  return [];
-};
+let memeList = [];
 
 // === update the index values when delete an item === //
 const updateindex = () => {
+  memeList = getLocal();
   memeList.forEach((element, index) => {
     element.index = parseInt(index, 10) + 1;
-    setLocal();
+    setLocal(memeList);
   });
 };
 
@@ -24,7 +16,7 @@ const updateText = (id, text) => {
   memeList = getLocal();
   id -= 1;
   memeList[id].description = text;
-  setLocal();
+  setLocal(memeList);
 };
 
 // === delete item from meme === //
@@ -32,7 +24,7 @@ const del = (index) => {
   index = Number(index);
   memeList = getLocal();
   memeList = memeList.filter((e) => e.index !== index);
-  setLocal();
+  setLocal(memeList);
 };
 
 // === add new meme === //
@@ -41,7 +33,7 @@ const add = (item) => {
   const len = memeList.length;
   const obj = { description: item, completed: false, index: len + 1 };
   memeList.push(obj);
-  setLocal();
+  setLocal(memeList);
 };
 
 // === get meme list === //
@@ -52,7 +44,7 @@ const completedStatus = (id) => {
   memeList = getLocal();
   id -= 1;
   memeList[id].completed = !memeList[id].completed;
-  setLocal();
+  setLocal(memeList);
 };
 
 // === get the status === //
@@ -60,6 +52,7 @@ const getStatus = (id) => {
   memeList = getLocal();
   return memeList[id].completed;
 };
+
 export {
-  add, del, getLocal, getLen, updateindex, updateText, completedStatus, getStatus,
+  add, del, getLen, updateindex, updateText, completedStatus, getStatus,
 };

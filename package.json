@@ -1,10 +1,12 @@
 {
+  "type": "module",
   "name": "to-do-list",
   "version": "1.0.0",
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
+    "watch": "jest --watch *.js",
     "start": "webpack serve --open",
     "build": "webpack"
   },
@@ -27,6 +29,7 @@
     "eslint-plugin-import": "^2.25.4",
     "hint": "^6.1.10",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.5.1",
     "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
@@ -37,6 +40,7 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "babel": "^6.23.0",
     "boxicons": "^2.1.2",
     "lodash": "^4.17.21"
   }

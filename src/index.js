@@ -2,8 +2,9 @@ import './style.css';
 import 'boxicons';
 import {
   completedStatus,
-  del, getLocal, updateindex, updateText,
+  del, updateindex, updateText,
 } from './module/meme-object.js';
+import { getLocal } from './module/storage.js';
 import dom from './module/add-Dom-elem.js';
 import d from './module/crud.js';
 
