@@ -1,10 +1,12 @@
 {
+  "type": "module",
   "name": "to-do-list",
   "version": "1.0.0",
   "description": "",
   "private": true,
   "scripts": {
     "test": "jest --coverage",
+    "watch": "jest --watch *.js",
     "start": "webpack serve --open",
     "build": "webpack"
   },
@@ -38,6 +40,7 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "babel": "^6.23.0",
     "boxicons": "^2.1.2",
     "lodash": "^4.17.21"
   }
